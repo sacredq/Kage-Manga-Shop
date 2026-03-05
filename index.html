@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Kage Manga Shop || Store</title>
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+        <meta charset = "UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <header>
+            <div class = "Logo">
+                <a href = "#home">
+                    <img src = "images/berserkLogo.png">
+                    <h3>Kage | Manga</h3>
+                </a>
+            </div>
+
+            <div class = "search-bar">
+                <input type = "text" placeholder = "Search...">
+                <div class = "search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+
+            <div class = "pages">
+                <a href = "#home">Home</a>
+                <a href = "#products">Products</a>
+                <a href = "#about">About</a>
+            </div>
+
+            <div class = "Login-btn">
+                <button id = "login-btn">
+                    <i class="fa-solid fa-user-lock"></i>
+                    Login
+                </button>
+            </div>
+        </header>
+        <section id = "home" class = "home">
+            <div class = "home-text">
+                <div class = "home-main-text">
+                    <h2>Premium Anime Manga</h2>
+                    <p>Transform your space with our high quality anime character mirrors. Each piece is designed with inspiration from the character, bringing them to life.</p>
+                </div>
+
+                <div class = "home-info">
+                    <div class = "home-info-el">
+                        <h4>2000+</h4>
+                        <p>Good Responses</p>
+                    </div>
+
+                    <div class = "home-info-el">
+                        <h4>70+</h4>
+                        <p>Available Products</p>
+                    </div>
+
+                    <div class = "home-info-el">
+                        <h4>24h</h4>
+                        <p>Buy Anytime</p>
+                    </div>
+                </div>
+
+                <div class = "home-button">
+                    <a href = "#products">
+                        <button>Explore Shop</button>
+                    </a>
+                </div>
+            </div>
+
+            <div class = "home-image">
+                <img src = "images/Berserk.jpg">
+            </div>
+        </section>
+        
+        <!-- LOGIN BOX -->
+        <div id = "loginWindow" class = "login-box">
+            <div class = "login-logo">
+                <p>Login / Sign Up</p>
+                <i id = "closeLogin" class="fa-solid fa-xmark"></i>
+            </div>
+
+            <div class = "login-fields">
+                <input class = "login-Fields" id = "emailField" type = "email" placeholder = "Enter your email address">
+                <input class = "login-Fields" id = "passwField" type = "password" placeholder = "Enter your password">
+            </div>
+
+            <div class = "under-fields">
+                <div class = "rememberMe">
+                    <input type = "checkbox" class = "check">
+                    <p>Remember me</p>
+                </div>
+
+                <p id = "forgot">Forgot password?</p>
+            </div>
+
+            <button id = "loginBtn">Login</button>
+            <div class = "loginBottom">
+                <p>Don't have an account?</p>
+                <a href = "#" id = "signUpOpener">Sign Up</a>
+            </div>
+        </div>
+
+        <!-- SIGN UP BOX -->
+         <div id = "signUpWindow" class = "signUp">
+            <div class = "signUp-Logo">
+                <h4>Sign Up</h4>
+                <i id = "closeSignUp" class="fa-solid fa-xmark"></i>
+            </div>
+
+            <div class = "signUp-Fields">
+                <input class = "signUp-Field" id = "name" type = "text" placeholder = "Enter your Full Name">
+                <input class = "signUp-Field" id = "emailField2" type = "email" placeholder = "Enter your Email">
+
+                <input class = "signUp-Field" id = "passw1Field" type = "password" placeholder = "Enter your password">
+                <input class = "signUp-Field" id = "passw2Field" type = "password" placeholder = "Confirm password">
+            </div>
+
+            <div class = "signUp-button">
+                <button id = "SignUp">Create Account</button>
+            </div>
+
+            <div class = "signUp-bottom">
+                <p>Already have an account?</p>
+                <a id = "loginOpener" href = "#">Login</a>
+            </div>
+         </div>
+
+        <section id = "products" class = "products">
+            <div class = "products-logo">
+                <h3>Buy a new manga right now!</h3>
+            </div>
+
+            <!-- MANGA SECTION -->
+            <div class = "manga-cards">
+                <div data-aos="zoom-in" class = "manga-card">
+                    <div class = "manga-image">
+                        <img src = "images/LelouchandC2-714x1024.webp">
+                    </div>
+
+                    <div class = "manga-info">
+                        <h5>Code Geass | Lelouch Lamperouge</h5>
+                        <h4>$30.99</h4>
+                    </div>
+
+                    <div class = "manga-button">
+                        <button class = "buy-manga">Buy Now</button>
+                    </div>
+
+                </div>
+
+                <div data-aos="zoom-in" class = "manga-card">
+                    <div class = "manga-image">
+                        <img src = "images/Yagami.jpg">
+                    </div>
+
+                    <div class = "manga-info">
+                        <h5>Death Note | Yagami Light</h5>
+                        <h4>$40.99</h4>
+                    </div>
+
+                    <div class = "manga-button">
+                        <button class = "buy-manga">Buy Now</button>
+                    </div>
+                </div>
+
+                <div data-aos="zoom-in" class = "manga-card">
+                    <div class = "manga-image">
+                        <img src = "images/AOT_Eren.jpg">
+                    </div>
+
+                    <div class = "manga-info">
+                        <h5>Attack On Titan | Eren Yeager</h5>
+                        <h4>$50.99</h4>
+                    </div>
+
+                    <div class = "manga-button">
+                        <button class = "buy-manga">Buy Now</button>
+                    </div>
+                </div>
+
+<!--  -->
+
+               <div data-aos="zoom-in" class = "manga-card">
+                    <div class = "manga-image">
+                        <img src = "images/Bleach.jpg">
+                    </div>
+
+                    <div class = "manga-info">
+                        <h5>Bleach | Ichigo Kurosaki</h5>
+                        <h4>$55.99</h4>
+                    </div>
+
+                    <div class = "manga-button">
+                        <button class = "buy-manga">Buy Now</button>
+                    </div>
+                </div>
+
+                <div data-aos="zoom-in" class = "manga-card">
+                    <div class = "manga-image">
+                        <img src = "images/Berserk_manga2.jpg">
+                    </div>
+
+                    <div class = "manga-info">
+                        <h5>Berserk | Guts</h5>
+                        <h4>$45.00</h4>
+                    </div>
+
+                    <div class = "manga-button">
+                        <button class = "buy-manga">Buy Now</button>
+                    </div>
+                </div>
+
+               <div data-aos="zoom-in" class = "manga-card">
+                    <div class = "manga-image">
+                        <img src = "images/Gaara from Naruto Poster - T-Shirt Graphic.jpg">
+                    </div>
+
+                    <div class = "manga-info">
+                        <h5>Naruto | Naruto Uzumaki</h5>
+                        <h4>$45.99</h4>
+                    </div>
+
+                    <div class = "manga-button">
+                        <button class = "buy-manga">Buy Now</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- BUY-PRODUCT WINDOW -->
+             <div id = "buy-box" class = "buy-box">
+                <div class = "buy-logo">
+                    <h3>Buy our Manga!</h3>
+                    <i id = "closeBuy" class="fa-solid fa-xmark"></i>
+                </div>
+
+                <div class = "user-purchase">
+                    <p id = "user-manga">Code Geass</p>
+                    <p>|</p>
+                    <p id = "manga-amount">1</p>
+                    <p>x</p>
+                </div>
+
+                <div class = "buy-fields">
+                    <input class = "buyField" type = "text" placeholder = "Full Name">
+                    <input class = "buyField" type = "number" placeholder = "Phone Number">
+                    <input class = "buyField" type = "number" placeholder = "Amount" id = "amount">
+                    <input class = "buyField" type = "text" placeholder = "City">
+                    <input class = "buyField" type = "text" placeholder = "Full Address"> 
+                </div>
+
+                <div class = "delivery-info">
+                    <p>Choose Delivery Method:</p>
+                    <div class = "delivery-options">
+                        <div class = "delivery-option">
+                            <input type = "radio" name = "opt">
+                            <p>Post Office</p>
+                        </div>
+
+                        <div class = "delivery-option">
+                            <input type = "radio" name = "opt">
+                            <p>Home Delivery</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class = "buy-button">
+                    <button id = "buy-button">Confirm Order</button>
+                </div>
+             </div>
+        </section>
+
+        <section id = "about" class = "about">
+            <h3>About <span> Kage </span>Manga</h3>
+
+            <div class = "about-main">
+                <div class = "about-text">
+                    <h4>More Than Just Ink on Paper</h4>
+                    <article>
+                        <p>At Kage Manga Shop, we believe that every great story deserves a permanent place on your shelf. In a world of digital scrolling, nothing beats the weight of a physical volume, the scent of fresh paper, and the intricate detail of a hand-drawn panel. We started this shop to provide fans with a curated selection of the world’s most iconic series—from the dark, gritty landscapes of Seinen masterpieces to the high-octane energy of Shonen classics. Whether you are completing a legendary collection or starting your very first journey, we are here to help you own the stories that define you.</p>
+                    </article>       
+                    
+                    <h4>Quality You Can Feel, Service You Can Trust</h4>
+                    <article>
+                        <p>Quality is at the heart of everything we do at Kage Manga. We know that as a collector, the condition of your volumes matters as much as the story inside. That’s why we source only the highest-quality prints and ensure every order is handled with the "collector’s touch"—packaged securely to arrive in pristine condition. Having over 2,000+ positive responses from the community, our customers don't just shop with us; they join a community of enthusiasts who value authenticity. From our lightning-fast 24/7 support to our curated "Available Products" list, we’ve built an experience designed by fans, for fans.</p>
+                    </article>
+                </div>
+
+                <div class = "about-image">
+                    <img src = "images/about.jpg">
+                </div>
+            </div>
+
+            <div id = "faq" class = "about-connect">
+                <h4>Connect With Us</h4>
+
+                <div class = "connect-links">
+                    <a href = "https://facebook.com">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href = "https://instagram.com">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href = "https://twitter.com">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+
+                    <a href = "https://youtube.com">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </div>
+
+                <p>Follow us for exclusive deals, new releases, and anime news!</p>
+            </div>
+
+            <footer>
+                <div class = "footer-info">
+                    <div class = "footer-column">
+                        <div class = "footer-Logo">
+                            <img src = "images/berserkLogo.png">
+                            <h4>Kage | Manga</h4>
+                        </div>
+                        <p class = "logo-text">Premium anime manga shop for true fans with years of experience.</p>
+                    </div>
+
+                    <div class = "footer-column links">
+                        <h4>Quick Links</h4>
+                        <a href = "#home">Home</a>
+                        <a href = "#products">Products</a>
+                        <a href = "#about">About</a>
+                        <a href = "#faq">FAQ</a>
+                    </div>
+
+                    <div class = "footer-column">
+                        <h4>Customer Service</h4>
+                        <p>Shipping info</p>
+                        <p>Returns</p>
+                        <p>Privacy Policy</p>
+                        <p>Terms of Service</p>
+                    </div>
+
+                    <div class = "footer-column links">
+                        <h4>Contact Us</h4>
+                        <p>support@kagemanga.com</p>
+                        <div class = "contact-info">
+                            <i class="fa-solid fa-phone"></i>
+                            <p>+380 (68) 967-42-61</p>
+                        </div>
+
+                        <div class = "contact-info">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <p>134 Street, Tokyo</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class = "footer-bottom">
+                    <p>&copy 2026 Kage | Manga. All rights reserved.</p>
+                    <div class = "footer-links">
+                        <a href = "https://facebook.com">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+
+                        <a href = "https://instagram.com">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+
+                        <a href = "https://twitter.com">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+
+                        <a href = "https://youtube.com">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </section>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script src = "main.js"></script>
+    </body>
+</html>

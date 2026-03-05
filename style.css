@@ -1,0 +1,825 @@
+*{
+    margin: 0; padding: 0; box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    width: 100%; min-height: 100vh;
+    color: #fff; overflow-x: hidden;
+}
+
+section{
+    width: 100%; min-height: 100vh;
+    z-index: -1;
+}
+
+header{
+    padding-left: 1rem; padding-right: 1rem;
+    width: 100%; position: fixed; top: 0; left: 0;
+    height: 12vh; background: #000; 
+    display: flex; flex-direction: row;
+    align-items: center; justify-content: space-between;
+    z-index: 1000;
+}
+
+.Logo{
+    display: flex; flex-direction: row; align-items: center;
+    color: #fff; cursor: pointer;
+}
+
+.Logo a{
+    display: flex; flex-direction: row; align-items: center;
+}
+
+.Logo img{
+    width: 100%; height: 100%; 
+    max-width: 4rem; 
+}
+
+.search-bar{
+    background: #333333; 
+    border-radius: 50px;
+    display: flex; flex-direction: row;
+    align-items: center; justify-content: space-between;
+}
+
+header input{
+    background: transparent;
+    border-radius: 50px; border: none; outline: none;
+    padding: 12px; width: 100%; color: #fff;
+}
+
+header input::placeholder{
+    opacity: 0.4; font-size: 13px; color: #fff;
+}
+
+.search-icon{
+    background: #fff;
+    border-radius: 50%;
+    width: 40px; height: 40px;
+    display: flex; align-items: center;
+    justify-content: center; cursor: pointer;
+}
+
+.search-icon i{
+    font-size: 12px; color: #000;
+}
+
+a{
+    text-decoration: none; color: #fff;
+}
+
+.pages{
+    display: flex; flex-direction: row;
+    align-items: center; gap: 2rem;
+}
+
+.pages a{
+    font-size: 18px; transition: all 0.3s;
+}
+
+.pages a:hover{
+    border-bottom: 2px solid #fff;
+}
+
+.Login-btn{
+    display: flex; flex-direction: row;
+    align-content: center; justify-content: space-evenly;
+}
+
+.Login-btn button{
+    display: flex; flex-direction: row;
+    align-items: center; justify-content: space-between;
+    gap: 6px;
+    color: #000; background: #fff;
+    border-radius: 50px; outline: none; cursor: pointer;
+    padding: 8px 14px; border: none;   
+    transition: all 0.3s;
+    font-size: 14px;
+}
+
+.Login-btn button:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 12px #fff;
+}
+
+.home{
+    /* background: linear-gradient(to right, #000000, #141414); */
+    /* background: linear-gradient(135deg, #050505, #0a0a0a); */
+    background: linear-gradient(135deg, #111111, #0c0c0c);
+    display: flex; flex-direction: row;
+    align-items: center; justify-content: space-between;
+    padding-left: 10vw; padding-right: 10vw;
+}
+
+.home-text{
+    max-width: 40vw;
+}
+
+.home-main-text h2{
+    font-size: 24px
+}
+
+.home-main-text p{
+    padding-top: 0.5rem; color: #f8fafc;
+    font-size: 14px; opacity: 0.6;
+}
+
+.home-info{
+    display: flex; flex-direction: row;
+    align-items: center; padding-top: 1rem;
+    gap: 1.5rem;
+}
+
+.home-info-el{
+    display: flex; flex-direction: column; gap: 6px;
+    text-align: center; 
+}
+
+.home-info-el h4{
+    font-size: 22px; font-weight: 800;
+}
+
+.home-info-el p{
+    font-size: 12px; color: lightgrey;
+    opacity: 0.5; font-weight: 400;
+    padding-top: 4px;
+}
+
+.home-button{
+    padding-top: 1rem;
+}
+
+.home-button button{
+    background: #fff; color: #000;
+    border-radius: 50px; padding: 9px 20px;
+    cursor: pointer; transition: all 0.3s;
+    border: none; outline: none; font-size: 13px;
+}
+
+.home-button button:hover{
+    box-shadow: 0 0 12px #fff;
+    transform: scale(1.1);
+}
+
+.home-image{
+    background: #111; padding: 20px;
+    border-radius: 15px;
+    /* box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 255, 255, 0.1); */
+    cursor: pointer;
+    box-shadow: 0 0 32px #fff;
+
+    /* 3D Perspective Logic */
+    perspective: 1000px; 
+    transition: transform 0.5s ease;
+    transform: perspective(1000px) rotateY(-15deg) rotateX(5deg);
+}
+
+.home-image:hover {
+    /* Subtle animation when you hover over it */
+    transform: perspective(1000px) rotateY(-5deg) rotateX(2deg) scale(1.02);
+}
+
+.home-image img{
+    width: 100%; max-width: 25vw; max-height: 60vh;
+    border-radius: 5px;
+    filter: brightness(0.9);
+    transition: filter 0.2s;
+}
+
+/* LOGIN */
+.login-box{
+    display: none; flex-direction: column;
+    align-items: center; 
+    border-radius: 8px; position: fixed;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(20, 20, 20, 0.95); 
+    font-size: 12px;
+    width: 300px; gap: 1rem; padding: 1rem;
+    z-index: 10;
+}
+
+.login-logo{
+    display: flex; flex-direction: row;
+    align-items: center; justify-content: space-between;
+    padding-top: 1rem; width: 100%;
+}
+
+.login-logo p{
+    font-size: 14px; font-weight: 600;
+    cursor: pointer;
+}
+
+.login-logo i{
+    cursor: pointer; transition: all 0.3s;
+}
+
+.login-logo i:hover{
+    transform: scale(1.2);
+}
+
+.login-fields{
+    display: flex; flex-direction: column; gap: 8px;
+    width: 100%; 
+}
+
+.login-fields input{
+    border-radius: 4px; color: #fff; 
+    opacity: 0.3; background: rgba(255, 255, 255, 0.132);
+    outline: none; border: none;
+    padding: 8px 12px;
+}
+
+.under-fields{
+    display: flex; flex-direction: row;
+    justify-content: space-between; align-items: center;
+    width: 100%;
+}
+
+.rememberMe{
+    display: flex; flex-direction: row;
+    gap: 4px; font-size: 12px; align-items: center;
+}
+
+.check{
+    accent-color: lightgrey; cursor: pointer;
+}
+
+#forgot{
+    font-size: 12px; cursor: pointer
+}
+
+.login-box button{
+    background: #fff; border: none; 
+    outline: none; border-radius: 6px;
+    color: #000; text-align: center;
+    padding: 10px 24px; cursor: pointer;
+    transition: all 0.3s; width: 100%;
+}
+
+.login-box button:hover{
+    transform: scale(1.02);
+    box-shadow: 0 0 16px #fff;
+}
+
+.loginBottom{
+    display: flex; flex-direction: row;
+    justify-content: space-between;
+    font-size: 12px; gap: 6px;
+}
+
+.login-fields input.error{
+    border: 1px solid rgb(202, 17, 17);
+}
+
+.signUp-Fields input.error{
+    border: 1px solid rgb(202, 17, 17);
+}
+
+/* SIGN UP */
+.signUp{
+    display: none; flex-direction: column;
+    background: rgba(20, 20, 20, 0.95); 
+    position: fixed; top: 50%; left: 50%;
+    transform: translate(-50%, -50%); 
+    padding: 1.5rem; z-index: 9999;
+}
+
+.signUp-Logo{
+    width: 100%; display: flex; flex-direction: row;
+    justify-content: space-between;
+}
+
+.signUp-Logo h4{
+    cursor: pointer;
+}
+
+.signUp-Logo i{
+    cursor: pointer;
+}
+
+.signUp-Fields{
+    display: flex; flex-direction: column; 
+    width: 100%; gap: 10px; padding-top: 1rem;
+}
+
+.signUp-Fields input{
+    border-radius: 4px; color: #fff; 
+    opacity: 0.3; background: rgba(255, 255, 255, 0.132);
+    outline: none; border: none;
+    padding: 8px 12px;
+}
+
+.signUp-button{
+    padding-top: 1rem; width: 100%;
+}
+
+.signUp-button button{
+    width: 100%; padding: 8px 10px;
+}
+
+.signUp button{
+    display: block;
+    background: #fff; border: none; 
+    outline: none; border-radius: 6px;
+    color: #000; text-align: center;
+    padding: 8px 20px; cursor: pointer;
+    transition: all 0.3s; width: 100%;
+}
+
+.signUp button:hover{
+    transform: scale(1.02);
+    box-shadow: 0 0 12px #fff;
+}
+
+.signUp-bottom{
+    display: flex; flex-direction: row;
+    width: 100%; justify-content: space-between;
+    font-size: 13px; padding-top: 1rem;
+}
+
+/* OPEN/CLOSE WINDOW CLASS */
+.WindowManage{
+    display: flex !important; flex-direction: column;
+}
+
+/* PRODUCT LOGO */
+
+.products-logo{
+    width: 100%; height: 15vh; background: #000;
+    display: flex; align-items: center; justify-content: center;
+}
+
+.products-logo h3{
+    color: #fff; cursor: pointer; transition: all 0.3s;
+}
+
+.products-logo h3:hover{
+    transform: scale(1.02);
+}
+
+/* PRODUCTS SECTION */
+.products{
+    width: 100%; min-height: 100vh; color: #fff;
+    background: linear-gradient(135deg, #111111, #0c0c0c);
+    padding-bottom: 2rem;
+}
+
+.manga-cards{
+    display: grid; gap: 1rem; padding-top: 1.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    max-width: 1200px; margin: 0 auto;
+}
+
+.manga-card{
+    border-radius: 8px; cursor: pointer; 
+    background: #2d2d2d;
+}
+
+.manga-info{
+    text-align: center;
+}
+
+.manga-info h4{
+    padding-top: 8px;
+}
+
+.manga-button{
+    display: flex; align-items: center; justify-content: center;
+    padding-bottom: 1rem;
+}
+
+.manga-card button{
+    margin-top: 12px;
+    background: #fff; color: #000;
+    border-radius: 50px; padding: 8px 32px;
+    cursor: pointer; transition: all 0.3s;
+    border: none; outline: none; font-size: 13px;
+}
+
+.manga-card button:hover{
+    box-shadow: 0 0 12px #fff;
+    transform: scale(1.05);
+}
+
+.manga-image img{
+    width: 100%; max-height: 250px; object-fit: cover;
+    border-radius: 6px; padding-bottom: 12px;
+}
+
+/* BUY-BOX */
+.buy-box{
+    position: fixed; top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    display: none; flex-direction: column;
+    padding: 1rem; 
+    /* background: #0c0c0c; */
+    background: rgba(20, 20, 20, 0.95); 
+    gap: 1rem; 
+}
+
+.buy-logo{
+    display: flex; flex-direction: row; align-items: center;
+    justify-content: space-between; width: 100%;
+}
+
+.buy-logo h3, i{
+    cursor: pointer;
+}
+
+.user-purchase{
+    display: flex; gap: 6px;
+}
+
+.user-purchase p{
+    font-size: 14px;
+}
+
+.buy-fields{
+    display: flex; flex-direction: column; gap: 12px;
+}
+
+.buy-fields input{
+    border-radius: 4px; color: #fff; 
+    opacity: 0.3; background: rgba(255, 255, 255, 0.132);
+    outline: none; border: none;
+    padding: 8px 12px;
+}
+
+.buy-fields input.error{
+    border: 1px solid rgb(202, 17, 17);
+}
+
+.delivery-info p{
+    font-size: 12px; opacity: 0.7;
+}
+
+.delivery-info input{
+    accent-color: #0c0c0c;
+}
+
+.delivery-options{
+    display: flex; flex-direction: row; gap: 1rem;
+    align-items: center; padding-top: 0.5rem;
+}
+
+.delivery-option{
+    display: flex; flex-direction: row; align-items: center;
+    gap: 6px;
+}
+
+.delivery-option input{
+    cursor: pointer;
+}
+
+input[type=number]{
+    -moz-appearance: textfield;
+}
+
+.buy-button{
+    width: 100%;
+}
+
+.buy-button button{
+    display: block;
+    background: #fff; border: none; 
+    outline: none; border-radius: 6px;
+    color: #000; text-align: center;
+    padding: 8px 18px; cursor: pointer;
+    transition: all 0.3s; width: 100%;
+}
+
+.buy-button button:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 16px #fff;
+}
+
+/* ABOUT SECTION */
+
+.about{
+    background: linear-gradient(135deg, #111111, #0c0c0c);
+    min-height: 100vh; display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+}
+
+.about h3{
+    text-align: center; cursor: pointer; padding-top: 16px;
+    font-size: 1.5rem;
+}
+
+.about span{
+    border-bottom: 3px solid #fff; width: 100%;
+    padding-bottom: 4px; 
+}
+
+.about .about-main{
+    display: flex; flex-direction: row;
+    justify-content: space-evenly;
+    gap: 10vw;
+    padding-top: 8vh; padding-bottom: 3.5rem;
+    align-items: center;
+}
+
+.about-text{
+    max-width: 35vw;
+}
+
+.about h4{
+    padding-top: 1rem;
+}
+
+.about article p{
+    font-size: 14px; padding-top: 1rem;
+    line-height: 1.5;
+}
+
+
+.about-image{
+    background: #111; padding: 20px;
+    border-radius: 15px;
+    /* box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 255, 255, 0.1); */
+    cursor: pointer;
+    max-height: 70vh; max-width: 25vw;
+    box-shadow: 0 0 32px #fff;
+
+    /* 3D Perspective Logic */
+    perspective: 1000px; 
+    transition: transform 0.5s ease;
+    transform: perspective(1000px) rotateY(-15deg) rotateX(5deg);
+}
+
+.about-image:hover {
+    /* Subtle animation when you hover over it */
+    transform: perspective(1000px) rotateY(-5deg) rotateX(2deg) scale(1.02);
+}
+
+.about-image img{
+    width: 100%; height: 100%; display: block;
+    object-fit: cover; 
+    border-radius: 5px;
+    filter: brightness(0.9);
+    transition: filter 0.2s;
+}
+
+.about-connect{
+    color: #fff; border-radius: 12px; border: none;
+    margin-bottom: 2rem;
+    /* background: #2d2d2d; */
+    background: #1a1a1a;
+    padding: 4rem; padding-top: 1rem;
+    text-align: center;
+}
+
+.about-connect h4{
+    font-weight: 800; font-size: 18px;
+}
+
+.connect-links{
+    display: flex; flex-direction: row;
+    justify-content: center; gap: 1.5rem;
+    padding-top: 1.5rem;
+}
+
+.connect-links a{
+    background-color: #333333;
+    width: 45px; height: 45px; border-radius: 50px;
+    display: flex; justify-content: center; align-items: center;
+    transition: all 0.3s;
+}
+
+.connect-links a:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 24px #fff;
+}
+
+.about-connect p{
+    font-size: 14px; padding-top: 1.5rem;
+    opacity: 0.7;
+}
+
+/* FOOTER */
+footer{
+    margin-top: 3.5rem;
+    width: 100%; min-height: 30vh; background: #000; color: #fff;
+    display: flex; flex-direction: column; padding-top: 1rem;
+    padding-bottom: 2rem;
+}
+
+.footer-info{
+    max-width: 1200px; width: 100%;
+    display: flex; flex-direction: row; align-items: flex-start;
+    justify-content: space-evenly;
+    border-bottom: 1px solid #9ca3af; 
+    padding-bottom: 2rem; margin: 0 auto;
+}
+
+.footer-column{
+    display: flex; flex-direction: column; gap: 6px;
+}
+
+.footer-Logo{
+    font-size: 16px; display: flex; flex-direction: row; 
+    align-content: center;
+    justify-content: flex-start;   
+}
+
+.footer-Logo{
+    display: flex; 
+}
+
+.footer-Logo img{
+    max-height: 3rem; width: auto; 
+}
+
+.footer-Logo h4, img{
+    cursor: pointer;
+}
+
+.logo-text{
+    max-width: 210px; text-align: center; padding-top: 4px;
+}
+
+.contact-info{
+    display: flex; gap: 6px;
+}
+
+.footer-column p{
+    cursor: pointer; font-size: 14px;
+    color: #9ca3af; font-weight: 400;
+}
+
+.footer-column a{
+    color: #9ca3af; font-weight: 400; font-size: 14px;
+}
+
+.footer-column i{
+    color: #9ca3af;
+}
+
+
+.footer-bottom{
+    display: flex; flex-direction: row;
+    justify-content: space-between;
+    width: 1200px; padding-top: 2rem; 
+    margin: 0 auto; color: #9ca3af;
+}
+
+.footer-links{
+    display: flex; gap: 8px;
+}
+
+.footer-links a{
+    color: #9ca3af; transition: all 0.3s;
+}
+
+.footer-links a:hover{
+    transform: scale(1.3);
+}
+
+/* RESPONSIVE DESIGN -> LATER */
+@media(max-width: 767px){
+    header{
+        padding: 0;
+    }
+
+    .Logo h3{
+        font-size: 16px;
+    }
+
+    header input{
+        max-width: 20vw;
+    }
+
+    .home{
+        display: flex; flex-direction: column;
+        justify-content: center; gap: 3rem;
+    }
+
+    .home-text{
+        max-width: 70vw; padding-top: 7vh;
+    }
+
+    .home-button{
+        text-align: center; padding-top: 1.5rem;
+    }
+
+    .home-button button{
+        font-size: 16px; 
+    }
+
+    .home-image{
+        margin-top: 0.5rem;
+        width: 55%; margin: 0 auto;
+    }
+
+    .home-image img{
+        max-width: 100%; max-height: none;
+        display: block;
+    }
+
+
+
+    /* INCEASE HOME IMAGE SIZE ON A PHONE */
+
+    /* HEADER INPUT PLACEHOLDER */
+
+    .pages{
+        display: none;  
+    }
+
+    .about .about-main{
+        padding-top: 5vh; 
+        display: flex; flex-direction: column;
+    }
+    
+    .about-text{
+        max-width: 65vw; 
+    }
+
+    .about-text h4{
+        font-size: 22px;
+    }
+
+    .about-text p{
+        font-size: 16px;
+    }
+
+    .about-image{
+        height: 30vh; min-width: 50vw;
+    }
+
+    .about-image img{
+        height: 100%; width: 100%;
+    }
+
+    .about-connect{
+        margin-top: 1.5rem; max-width: 90%;
+    }
+
+    .about-connect p{
+        opacity: 0.8;
+    }
+
+    /* FOOTER RESPONSIVE DESIGN */
+
+    .footer-column p, a{
+        font-size: 12px;
+    }
+
+    .footer-column h4{
+        font-size: 14px;
+    }
+
+    .footer-column{
+        gap: 8px;
+    }
+
+    .footer-info{
+        display: grid; 
+        grid-template-columns: 1.2fr 0.8fr;
+        align-items: flex-start;
+        justify-content: center;
+        width: 90%; gap: 1rem 0;
+        margin: 0 auto; 
+        padding-bottom: 2rem;
+    }
+
+    .footer-bottom{
+        width: 90%; padding-top: 1.5rem; 
+    }
+
+    .footer-bottom p{
+        font-size: 14px;
+    }
+
+    .footer-links{
+        gap: 0px;
+    }
+
+    .footer-links a{
+        font-size: 16px;
+    }
+
+    .footer-column.links{
+        display: flex; justify-content: flex-end;
+        align-items: flex-end; padding-right: 1rem;
+    }
+
+    .footer{
+        height: auto; padding-bottom: 1rem;
+    }
+
+    .footer-Logo{
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .logo-text{
+        text-align: left;
+    }
+}
